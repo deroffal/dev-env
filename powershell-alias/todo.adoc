@@ -1,0 +1,27 @@
+= git pull all
+
+[source,powershell]
+----
+Get-ChildItem | ? { $_.PSIsContainer } | % { Push-Location $_.FullName; git fetch; git rebase ; Pop-Location }
+----
+
+----
+PS C:\DEV\workspaces\recuperation> Get-ChildItem | ? { $_.PSIsContainer } | % { Push-Location $_.FullName; git fetch; git rebase ; Pop-Location }
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+Current branch develop-belenos is up to date.
+Current branch develop-belenos is up to date.
+error: cannot rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: Please commit or stash them.
+Current branch develop-belenos is up to date.
+----
+
+
+https://stackoverflow.com/questions/19091750/how-to-search-for-a-folder-with-powershell/19092542
+
+https://gist.github.com/jdhitsolutions/ba3295167ccc997b7714e1f2a2777405
+
+https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+
+https://longair.net/blog/2009/04/16/git-fetch-and-merge/

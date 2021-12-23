@@ -1,44 +1,44 @@
 # Location
-function CdWorkspace([string] $directory)
+function Set-Location-Workspace([string] $directory)
 {
     Set-Location -Path "$Env:w\$directory"
 }
 
-Set-Alias -Name cdw -Value CdWorkspace
+Set-Alias -Name cdw -Value Set-Location-Workspace
 
 # Java
-function SetJava8
+function Set-Java8
 {
     $Env:JAVA_HOME = $Env:JAVA8_HOME
     $Env:PATH = "$Env:JAVA_HOME\bin;$Env:PATH"
     java -version
 }
 
-function SetJava11
+function Set-Java11
 {
     $Env:JAVA_HOME = $Env:JAVA11_HOME
     $Env:PATH = "$Env:JAVA_HOME\bin;$Env:PATH"
     java -version
 }
 
-function SetJava14
+function Set-Java14
 {
     $Env:JAVA_HOME = $Env:JAVA14_HOME
     $Env:PATH = "$Env:JAVA_HOME\bin;$Env:PATH"
     java -version
 }
 
-function SetJava17
+function Set-Java17
 {
     $Env:JAVA_HOME = $Env:JAVA17_HOME
     $Env:PATH = "$Env:JAVA_HOME\bin;$Env:PATH"
     java -version
 }
 
-Set-Alias -Name java8 -Value SetJava8
-Set-Alias -Name java11 -Value SetJava11
-Set-Alias -Name java14 -Value SetJava14
-Set-Alias -Name java17 -Value SetJava17
+Set-Alias -Name java8  -Value Set-Java8
+Set-Alias -Name java11 -Value Set-Java11
+Set-Alias -Name java14 -Value Set-Java14
+Set-Alias -Name java17 -Value Set-Java17
 
 # Maven
 function mavenCleanInstall
