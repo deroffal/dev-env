@@ -1,0 +1,16 @@
+== Maven aliases
+
+=== Requirements
+
+`mvn` should be available (ie some `M2_HOME` in `PATH`).
+
+=== Launch clean install
+
+Use `mci` for un `mvn clean install` and `mcist` to skip tests.
+
+Parameters :
+
+* *-f :*  Force the use of an alternate POM file (or directory with pom.xml) (cf -f in mvn)
+* *-st :*  If present, skip tests (add -DskipTests to the command)
+
+TIP: Run `help mci` to get help.

@@ -1,0 +1,31 @@
+== Set location aliases
+
+=== Existing environment variables
+
+|===
+|Name | Description
+
+|`w`
+|Workspace root directory
+
+|===
+
+=== Go to workspace root directory
+
+Use `cdw` to set current location to `$w`.
+
+[source,powershell]
+.go to worskpace
+----
+PS C:\Users\alexandre> cdw
+PS C:\DEV\workspaces>
+----
+
+A parameter can be added to go further to a specific directory :
+
+[source,powershell]
+.go to worskpace/tools
+----
+PS C:\Users\alexandre> cdw tools
+PS C:\DEV\workspaces\tools>
+----

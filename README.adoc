@@ -1,0 +1,3 @@
+= Windows tips
+
+Some documentation about me using Windows (powershell aliases, run on startup, ...)

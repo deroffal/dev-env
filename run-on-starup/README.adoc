@@ -1,0 +1,6 @@
+= Make an app run to automatically at startup in Windows 10
+
+Use `Windows + R` to execute : `shell:startup`.
+
+It will open a directory (`%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`)`.
+Any file in this directory will be executed at startup.

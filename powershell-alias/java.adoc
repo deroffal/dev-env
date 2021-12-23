@@ -1,0 +1,27 @@
+== Java aliases
+
+=== Existing environment variables
+
+|===
+|Name | Description
+
+|`JAVA${n}_HOME`
+|Installation directory for Java n (8/11/17, ...)
+
+|`JAVA_HOME`
+|Installation directory for current Java version
+
+|===
+
+=== Set JAVA_HOME
+
+Use `java${n}` to set `n` as current java version.
+
+[source,powershell]
+.set java 17
+----
+PS C:\Users\alexandre> java17
+openjdk version "17.0.1" 2021-10-19
+OpenJDK Runtime Environment (build 17.0.1+12-39)
+OpenJDK 64-Bit Server VM (build 17.0.1+12-39, mixed mode, sharing)
+----

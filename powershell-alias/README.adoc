@@ -1,0 +1,9 @@
+= Powershel Alias
+
+== Installation
+The file link:profile.ps1[profile.ps1] should be located in `$Home\[My] Documents\\WindowsPowerShell\` directory to be accessed by the current user (other locations can be used in order to be accessed by other users).
+
+ * link:location.adoc[Location]
+ * link:java.adoc[Java]
+ * link:maven.adoc[Maven]
+
