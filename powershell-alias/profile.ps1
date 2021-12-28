@@ -8,7 +8,7 @@ Set-Alias -Name cdw -Value CdWorkspace
 
 # Java
 
-Import-Module Set-Java
+Import-Module Java
 
 function SetJava8
 {

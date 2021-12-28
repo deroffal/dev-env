@@ -1,0 +1,1 @@
+Module to handle my diffirent Java installations.
