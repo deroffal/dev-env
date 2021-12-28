@@ -7,32 +7,27 @@ function CdWorkspace([string] $directory)
 Set-Alias -Name cdw -Value CdWorkspace
 
 # Java
+
+Import-Module Set-Java
+
 function SetJava8
 {
-    $Env:JAVA_HOME = $Env:JAVA8_HOME
-    $Env:PATH = "$Env:JAVA_HOME\bin;$Env:PATH"
-    java -version
+    Set-Java 8
 }
 
 function SetJava11
 {
-    $Env:JAVA_HOME = $Env:JAVA11_HOME
-    $Env:PATH = "$Env:JAVA_HOME\bin;$Env:PATH"
-    java -version
+    Set-Java 11
 }
 
 function SetJava14
 {
-    $Env:JAVA_HOME = $Env:JAVA14_HOME
-    $Env:PATH = "$Env:JAVA_HOME\bin;$Env:PATH"
-    java -version
+    Set-Java 14
 }
 
 function SetJava17
 {
-    $Env:JAVA_HOME = $Env:JAVA17_HOME
-    $Env:PATH = "$Env:JAVA_HOME\bin;$Env:PATH"
-    java -version
+    Set-Java 17
 }
 
 Set-Alias -Name java8 -Value SetJava8
@@ -41,39 +36,4 @@ Set-Alias -Name java14 -Value SetJava14
 Set-Alias -Name java17 -Value SetJava17
 
 # Maven
-function mavenCleanInstall
-{
-    <#
-        .SYNOPSIS
-            Run a mvn clean install.
-
-        .EXAMPLE
-            mci -f parent/pom.xml -st
-    #>
-    Param(
-        #Force the use of an alternate POM file (or directory with pom.xml) (cf -f in mvn)
-        [Parameter(Mandatory = $false)]
-        [string]$f,
-        #If present, skip tests (add -DskipTests to the command)
-        [Parameter(Mandatory = $false)]
-        [switch]$st
-    )
-
-    $command = "mvn clean install"
-
-    if ($f)
-    {
-        $command = "$command -f $f"
-    }
-
-    if ($st)
-    {
-        $command = "$command -DskipTests"
-    }
-
-
-    Write-Output $command
-    Invoke-Expression $command
-}
-
-Set-Alias -Name mci -Value mavenCleanInstall
+Set-Alias -Name mci -Value Invoke-CleanInstall

@@ -1,0 +1,23 @@
+= Powershell Modules
+
+== Installation
+
+The modules should be located in `$env:PSModulePath` directory.
+
+Each module should have a directory named by its name : 
+
+-------------------------
+* $env:PSModulePath
+** my-module1
+*** my-module1.psm1
+** my-module2
+*** my-module2.psm1
+...
+-------------------------
+
+== Import module
+
+[script,powershell]
+----
+Import-Module MyModule
+----
