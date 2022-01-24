@@ -1,1 +1,3 @@
 Module to handle my diffirent Java installations.
+
+The module use `Log` module to color logs. It can be replaced by standart Write-xxx functions.

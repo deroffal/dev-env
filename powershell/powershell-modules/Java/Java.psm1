@@ -16,7 +16,7 @@ function Set-Java {
      $JAVA_HOME_VALUE = [System.Environment]::GetEnvironmentVariable("JAVA${version}_HOME")
 
     if($null -eq $JAVA_HOME_VALUE){
-        Write-Warning """Unknown Java version : $version
+        Write-asError """Unknown Java version : $version
         Please add a 'JAVA${version}_HOME' with Java $version installation"""
         return;
     }

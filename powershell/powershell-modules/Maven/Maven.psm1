@@ -1,4 +1,3 @@
-
 function Invoke-CleanInstall
 {
     <#
@@ -9,10 +8,10 @@ function Invoke-CleanInstall
             mci -f parent/pom.xml -st
     #>
     Param(
-        #Force the use of an alternate POM file (or directory with pom.xml) (cf -f in mvn)
+    #Force the use of an alternate POM file (or directory with pom.xml) (cf -f in mvn)
         [Parameter(Mandatory = $false)]
         [string]$f,
-        #If present, skip tests (add -DskipTests to the command)
+    #If present, skip tests (add -DskipTests to the command)
         [Parameter(Mandatory = $false)]
         [switch]$st
     )
@@ -21,16 +20,16 @@ function Invoke-CleanInstall
 
     if ($f)
     {
-        $command = "$command -f $f"
+        $command += " -f $f"
     }
 
     if ($st)
     {
-        $command = "$command -DskipTests"
+        $command += " -DskipTests"
     }
 
 
-    Write-Output $command
+    Write-asDebug $command
     Invoke-Expression $command
 }
 
