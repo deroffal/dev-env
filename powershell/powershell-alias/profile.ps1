@@ -7,9 +7,6 @@ function CdWorkspace([string] $directory)
 Set-Alias -Name cdw -Value CdWorkspace
 
 # Java
-
-Import-Module Java
-
 function SetJava8
 {
     Set-Java 8
@@ -37,3 +34,8 @@ Set-Alias -Name java17 -Value SetJava17
 
 # Maven
 Set-Alias -Name mci -Value Invoke-CleanInstall
+
+# Git
+Set-Alias -Name gud -Value Update-GitDirectories
+Set-Alias -Name dlb -Value Delete-LocalBranch
+Set-Alias -Name gc -Value Invoke-CheckoutBranch
