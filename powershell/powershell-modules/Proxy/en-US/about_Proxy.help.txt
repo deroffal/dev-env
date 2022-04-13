@@ -1,0 +1,2 @@
+Load proxy configuration for remote or office work.
+Files to load should be found on ~\.proxy\{remote|office}.
