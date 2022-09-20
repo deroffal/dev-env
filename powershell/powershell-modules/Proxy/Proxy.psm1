@@ -19,6 +19,12 @@ function Set-OfficeProxyConfig
 
     Write-asDebug "Adding .docker/config.json"
     Copy-Item "$OFFICE_PROXY_CONF_HOME\config.json" "~\.docker\config.json"
+
+    Write-asDebug "Setting HTTP_PROXY & HTTPS_PROXY"
+    $PROXY_URL = [System.Environment]::GetEnvironmentVariable("PROXY_URL")
+    $Env:HTTP_PROXY = $PROXY_URL
+    $Env:HTTPS_PROXY = $PROXY_URL
+
 }
 
 function Set-RemoteProxyConfig
@@ -38,6 +44,11 @@ function Set-RemoteProxyConfig
 
     Write-asDebug "Adding .docker/config.json"
     Copy-Item "$REMOTE_PROXY_CONF_HOME\config.json" "~\.docker\config.json"
+
+
+    Write-asDebug "Unsetting HTTP_PROXY & HTTPS_PROXY"
+    $Env:HTTP_PROXY = ""
+    $Env:HTTPS_PROXY = ""
 }
 
 Export-ModuleMember -Function Set-OfficeProxyConfig

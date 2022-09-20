@@ -1,2 +1,4 @@
 Load proxy configuration for remote or office work.
 Files to load should be found on ~\.proxy\{remote|office}.
+
+Add or remove the value of the environnement variables `HTTP_PROXY` and `HTTPS_PROXY` with the value of `PROXY_URL`
