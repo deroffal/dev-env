@@ -1,0 +1,32 @@
+= .gitconfig
+
+Snippets from `.gitconfig`
+
+== Git autocorrect :
+
+.configuration
+[source,shell]
+----
+git config --global help.autocorrect 20
+----
+
+.in .gitconfig file
+----
+[help]
+	autocorrect = 20
+----
+
+.exemple
+----
+$ git xlone my_repo
+WARNING: You called a Git command named 'xlone', which does not exist.
+Continuing in 2.0 seconds, assuming that you meant 'clone'.
+----
+
+== Use multiple accounts
+
+.in .gitconfig file
+----
+[includeIf "gitdir:${path_to_other_workspace}/**/*.git"]
+    path = ${path_to_another .gitconfig file}
+----
