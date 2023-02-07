@@ -27,6 +27,24 @@ Continuing in 2.0 seconds, assuming that you meant 'clone'.
 
 .in .gitconfig file
 ----
+# if we are inside 'path_to_other_workspace' directory, use the other .gitconfig file ...
 [includeIf "gitdir:${path_to_other_workspace}/**/*.git"]
-    path = ${path_to_another .gitconfig file}
+    	path = ${path_to_another .gitconfig file}
+----
+
+TIPS: Following configuration to avoid havong to change ssh host :
+
+.in the other .gitconfig file
+---- 
+[url "git@${other_account}.github.com"]
+	insteadof = git@github.com
+----
+
+.in .ssh/config
+----
+Host ${other_account}.github.com
+  HostName github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ${other_ssh_key}
 ----
