@@ -1,3 +1,7 @@
-= Windows-dev-env
+= Dev-env
 
-Some documentation about my use of Windows (powershell, run on startup, ...)
+Some documentation about my developpement environnement :
+
+* tools (git, k9s, ...)
+* use of Windows (powershell, run on startup, ...)
+* ...
