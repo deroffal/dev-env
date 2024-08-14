@@ -1,0 +1,21 @@
+= Multiple Git accounts
+
+== Clone process
+
+When cloning a repository, do not use `github.com` as ssh host, but rather the host defined in the `.ssh/config` file :
+
+Assuming that we use the described configuration, and the repo is a personal repository (in `perso` directory) :
+
+[source,shell]
+----
+# do not clone like this :
+git clone git@github.com:deroffal/dev-env.git
+# but rather like this :
+git clone git@perso.github.com:deroffal/dev-env.git
+----
+
+== References
+
+How to specify the private SSH-key to use when executing shell command on Git?
+
+https://stackoverflow.com/a/11251797/17515581

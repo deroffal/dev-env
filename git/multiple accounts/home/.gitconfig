@@ -1,0 +1,14 @@
+[core]
+	autocrlf = input
+[help]
+	autocorrect = 20
+[commit]
+	gpgsign = true
+
+[includeIf "gitdir/i:~/work/**/*.git"]
+	path = "~/work/.gitconfig_work"
+
+[includeIf "gitdir/i:~/perso/**/*.git"]
+    path = ~/perso/.gitconfig_perso
+
+
