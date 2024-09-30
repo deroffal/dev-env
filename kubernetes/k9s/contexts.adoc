@@ -1,30 +1,5 @@
 = k9s contexts
 
-== Aliases for context
-
-.Create aliases for contexts
-[source,shell]
-----
-kubectx qualif=gke_qualification-europe-west4-b_k8s-qualification
-kubectx west1=gke_production-europe-west1_k8s-production
-kubectx west4=gke_production-europe-west4_k8s-production
-----
-
-[source,shell]
-----
-# Before :
-~ kubectx
-gke_production-europe-west4_k8s-production
-gke_production-europe-west1_k8s-production
-gke_qualification-europe-west4-b_k8s-qualification
-
-# After :
-~ kubectx
-qualif
-west1
-west4
-----
-
 == Skins per context
 
 How to change k9s color skin per context :
